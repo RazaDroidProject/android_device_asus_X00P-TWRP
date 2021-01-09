@@ -37,6 +37,9 @@ TARGET_BOARD_SUFFIX := _64
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 
+# Build
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78B0000
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
@@ -48,6 +51,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/prebuilt/zImage
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Encryption
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
@@ -90,7 +94,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_SCREEN_BLANK_ON_BOOT := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/twrp.fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/system/etc/twrp.fstab
 BOARD_SUPPRESS_SECURE_ERASE := true
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true

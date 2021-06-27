@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_X00P.mk
+	$(LOCAL_DIR)/twrp_X00P.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_X00P-eng
+    twrp_X00P-eng

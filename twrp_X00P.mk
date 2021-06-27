@@ -17,8 +17,8 @@
 # Inherit Target Product stuff
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common twrp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/ASUS/X00P/recovery/
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00P
-PRODUCT_NAME := omni_X00P
+PRODUCT_NAME := twrp_X00P
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_X00PD
 PRODUCT_MANUFACTURER := asus
